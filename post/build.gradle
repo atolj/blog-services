@@ -1,12 +1,9 @@
 buildscript {
-	ext {
-		springBootVersion = '1.4.2.RELEASE'
-	}
 	repositories {
 		mavenCentral()
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
 	}
 }
 
@@ -18,6 +15,7 @@ jar {
 	baseName = 'post'
 	version = '0.0.1-SNAPSHOT'
 }
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -28,5 +26,8 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile("io.springfox:springfox-swagger2:$swaggerVersion")
+	compile("io.springfox:springfox-swagger-ui:$swaggerVersion")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
