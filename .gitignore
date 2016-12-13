@@ -17,6 +17,7 @@
 *.ipr
 
 ### NetBeans ###
+classes/
 nbproject/private/
 build/
 nbbuild/
