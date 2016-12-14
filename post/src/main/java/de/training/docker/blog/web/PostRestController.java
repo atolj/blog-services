@@ -27,7 +27,7 @@ public class PostRestController {
 
     @RequestMapping(value = "/post/{id}", method = RequestMethod.PUT)
     public void addPost(@PathVariable("id") long id, @RequestBody Post post){
-        postrepository.save(postMapper.mapToEntity(post));
+        postrepository.save(postMapper.mapToEntity(id, post));
     }
 
     @RequestMapping(value = "/post/{id}", method = RequestMethod.GET)

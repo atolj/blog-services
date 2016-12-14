@@ -3,6 +3,7 @@ package de.training.docker.blog.repository.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "post")
@@ -21,8 +22,10 @@ public class PostEntity {
 
     private String headline;
 
-
     private String content;
+
+    @Temporal(TemporalType.DATE)
+    private Date postedOn;
 
     @ManyToOne(cascade = {CascadeType.ALL})
     private AuthorEntity author;

@@ -15,10 +15,9 @@ public class AuthorMapper {
 
     public AuthorEntity map(Author author) {
         AuthorEntity authorEntity = new AuthorEntity();
+        authorEntity.setName(author.getName());
+        authorEntity.setSurname(author.getSurname());
+        authorEntity.setEmail(author.getEmail());
         return authorEntity;
-//        return new AuthorEntity(author.getName())
-//                .surname(author.getSurname())
-//                .email(author.getEmail())
-//                .build();
     }
 }
