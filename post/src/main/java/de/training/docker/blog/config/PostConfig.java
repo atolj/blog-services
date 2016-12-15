@@ -5,6 +5,7 @@ import de.training.docker.blog.mapper.AuthorMapper;
 import de.training.docker.blog.mapper.PostMapper;
 import de.training.docker.blog.repository.PostRepository;
 import de.training.docker.blog.web.PostRestController;
+import de.training.docker.blog.web.PostWebController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,6 +29,12 @@ public class PostConfig {
     @Bean
     public PostRestController postRestController(){
         return new PostRestController(postRepository, postMapper());
+    }
+
+
+    @Bean
+    public PostWebController postWebController(){
+        return new PostWebController(postRepository, postMapper());
     }
 
 

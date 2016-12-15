@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("/rest")
 public class PostRestController {
 
     private PostRepository postrepository;
